@@ -24,6 +24,8 @@ protected:
 	void finalPass();
 	void gui();
 
+	void firstPass();
+
 private:
 	TextureShader* textureShader;
 	PlaneMesh* mesh;
@@ -34,6 +36,16 @@ private:
 	DepthShader* depthShader;
 
 	ShadowMap* shadowMap;
+
+	CubeMesh* cube;
+	SphereMesh* sphere;
+
+	float position = -5;
+	float positionModifier = 0.01;
+	float rotation = 0;
+
+	OrthoMesh* shadowMapReader;
+	RenderTexture* shadowRenderTexture;
 };
 
 #endif
